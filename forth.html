@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rizz Lines _Salim</title>
+  <meta name="description" content="Rizz Lines _Salim - Random flirting lines, funny lines, Instagram bio ideas, quotes of the day, copy & share. Viral interactive site.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== GENERAL STYLING ===== */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      text-align: center;
+      color: #ff79c6;
+      text-shadow: 0 0 10px #ff79c6, 0 0 20px #ff4b2b;
+      margin-bottom: 20px;
+    }
+    p {
+      text-align: center;
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      margin-bottom: 40px;
+    }
+    .dark-toggle {
+      margin-top: 10px;
+      padding: 10px 25px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      color: #fff;
+      box-shadow: 0 0 20px rgba(255,65,108,0.6);
+      transition: 0.3s;
+    }
+    .dark-toggle:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255,65,108,1);
+    }
+
+    /* ===== BUTTONS ===== */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .fancy-button, .about-button, .cat-btn {
+      position: relative;
+      padding: 15px 50px;
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      margin: 10px;
+      box-shadow: 0 0 20px rgba(255,65,108,0.6);
+      transition: transform 0.3s, box-shadow 0.3s;
+      overflow: hidden;
+    }
+    .fancy-button:hover, .about-button:hover, .cat-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px rgba(255,65,108,1), 0 0 60px rgba(255,65,108,0.8);
+    }
+    .fancy-button::before, .about-button::before, .cat-btn::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: rgba(255,255,255,0.15);
+      transform: rotate(45deg);
+      transition: 0.5s;
+      opacity: 0;
+    }
+    .fancy-button:hover::before, .about-button:hover::before, .cat-btn:hover::before {
+      top: -10%;
+      left: -10%;
+      opacity: 1;
+    }
+
+    /* ===== MOOD SELECTOR ===== */
+    .mood-selector {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .cat-btn {
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    }
+
+    /* ===== GENERATOR BOXES ===== */
+    .generator, .mashup, .quotes, .user-lines {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      padding: 25px;
+      max-width: 700px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .line-box {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 20px;
+      margin: 15px 0;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .line-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(255,65,108,0.6);
+    }
+    input[type="text"] {
+      padding: 10px;
+      border-radius: 15px;
+      border: none;
+      width: 80%;
+      margin-bottom: 10px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      width: 100%;
+    }
+    footer a {
+      color: #ff79c6;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width: 768px){
+      .mood-selector {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🔥 Rizz Lines _Salim</h1>
+  <p>Pick your mood, get lines, copy & share 😎</p>
+
+</header>
+
+<!-- Navigation Buttons -->
+<div class="button-container">
+  <a href="quotes.html" class="fancy-button">Generate Quotes</a>
+  <a href="about.html" class="about-button">About</a>
+</div>
+
+<!-- Mood Selector -->
+<section class="mood-selector">
+  <button onclick="setMood('playful')" class="cat-btn playful">Playful 😜</button>
+  <button onclick="setMood('confident')" class="cat-btn confident">Confident 💪</button>
+  <button onclick="setMood('smooth')" class="cat-btn smooth">Smooth 😎</button>
+  <button onclick="setMood('funny')" class="cat-btn funny">Funny 😆</button>
+  <button onclick="setMood('instagram')" class="cat-btn instagram">Instagram Bio 📸</button>
+</section>
+
+<!-- Line Generator -->
+<section class="generator">
+  <h2 id="mood-title">Your Line:</h2>
+  <div id="line-box" class="line-box" onclick="copyLine(this)">Choose a mood above to get started!</div>
+  <div class="share-buttons">
+    <button onclick="shareWhatsApp()">📲 Share WhatsApp</button>
+    <button onclick="shareInstagram()">📸 Share Instagram</button>
+    <button onclick="shareTikTok()">🎵 Share TikTok</button>
+  </div>
+  <button id="new-line" class="cat-btn" onclick="generateLine()">Generate New Line</button>
+</section>
+
+<!-- Line Mashup Generator -->
+<section class="mashup">
+  <h2>🎉 Line Mashup Generator</h2>
+  <p>Select two lines to create a super rizz line!</p>
+  <button class="cat-btn" onclick="generateMashup()">Generate Mashup</button>
+  <div id="mashup-box" class="line-box" onclick="copyLine(this)">Mashup appears here!</div>
+</section>
+
+<!-- Quotes of the Day -->
+<section class="quotes">
+  <h2>💡 Quotes of the Day</h2>
+  <div id="quote-box" class="line-box" onclick="copyLine(this)">Click generate to see a quote!</div>
+  <button class="cat-btn" onclick="generateQuote()">New Quote</button>
+</section>
+
+<!-- User-Submitted Lines -->
+<section class="user-lines">
+  <h2>✍️ User Submitted Lines</h2>
+  <input type="text" id="user-line-input" placeholder="Type your rizz line here">
+  <button class="cat-btn" onclick="submitLine()">Submit Line</button>
+  <ul id="user-lines-list"></ul>
+</section>
+
+<!-- Popular Lines -->
+<section class="popular">
+  <h3>🔥 Most Copied Lines</h3>
+  <ul id="popular-lines"></ul>
+</section>
+
+<footer>
+  <div class="nav-buttons">
+    <a href="contact.html">📧 Contact</a>
+    <a href="privacy.html">🔒 Privacy</a>
+  </div>
+  <p>&copy; 2025 Rizz Lines _Salim. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

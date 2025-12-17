@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rizz Lines _Salim</title>
+<meta name="description" content="Start rizzing with the best rizz lines, funny lines, and bio ideas.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* ===== BODY ===== */
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    background: radial-gradient(circle at top left, #ff2d55, #6a0dad, #1c1c3c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+  }
+
+  /* ===== FLOATING PARTICLES ===== */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: float 20s infinite linear;
+  }
+  @keyframes float {
+    0% {transform: translateY(0) translateX(0) scale(1);}
+    50% {transform: translateY(-800px) translateX(300px) scale(1.3);}
+    100% {transform: translateY(0) translateX(0) scale(1);}
+  }
+
+  /* ===== CONTAINER ===== */
+  .landing-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding: 60px 40px;
+    box-shadow: 0 0 60px rgba(255,45,108,0.5), 0 0 100px rgba(106,13,173,0.3);
+    animation: fadeIn 1.5s ease-in-out;
+    max-width: 500px;
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px #ff79c6, 0 0 30px #ff2d55, 0 0 45px #ff416c;
+    animation: neonPulse 2s infinite alternate;
+  }
+
+  p {
+    font-size: 18px;
+    opacity: 0.85;
+    margin-bottom: 40px;
+    animation: fadeInText 2s ease-in-out;
+  }
+
+  /* ===== START BUTTON ===== */
+  .start-btn {
+    display: inline-block;
+    padding: 20px 60px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border-radius: 50px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 0 25px rgba(255,65,108,0.6), 0 0 50px rgba(255,65,108,0.4);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .start-btn:hover {
+    transform: scale(1.15) rotate(-1deg);
+    box-shadow: 0 0 60px rgba(255,65,108,1), 0 0 120px rgba(255,65,108,0.8), 0 0 180px rgba(255,65,108,0.6);
+  }
+  .start-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255,255,255,0.15);
+    transform: rotate(45deg);
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .start-btn:hover::before {
+    top: -10%;
+    left: -10%;
+    opacity: 1;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes neonPulse {
+    0% {text-shadow: 0 0 10px #ff79c6, 0 0 20px #ff2d55, 0 0 30px #ff416c;}
+    100% {text-shadow: 0 0 20px #ff79c6, 0 0 40px #ff2d55, 0 0 60px #ff416c;}
+  }
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  @keyframes fadeInText {
+    from {opacity:0;}
+    to {opacity:1;}
+  }
+</style>
+</head>
+<body>
+
+  <!-- FLOATING PARTICLES -->
+  <div class="particle" style="width:15px; height:15px; background:#ff416c; top:80%; left:20%; animation-duration:22s;"></div>
+  <div class="particle" style="width:10px; height:10px; background:#ff2d55; top:50%; left:70%; animation-duration:18s;"></div>
+  <div class="particle" style="width:12px; height:12px; background:#ff79c6; top:30%; left:40%; animation-duration:20s;"></div>
+  <div class="particle" style="width:8px; height:8px; background:#ff416c; top:60%; left:10%; animation-duration:25s;"></div>
+  <div class="particle" style="width:14px; height:14px; background:#ff2d55; top:20%; left:80%; animation-duration:19s;"></div>
+
+  <!-- MAIN CONTAINER -->
+  <div class="landing-container">
+    <h1>🔥 Rizz Lines _Salim</h1>
+    <p>Your ultimate rizz generator 😎</p>
+    <a href="gender.html" class="start-btn">🚀 Start Rizzin</a>
+  </div>
+
+</body>
+</html>

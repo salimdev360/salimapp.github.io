@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Gender | Rizz Lines _Salim</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== GENERAL ===== */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ===== CONTAINER ===== */
+    .landing-container {
+      text-align: center;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(15px);
+      border-radius: 25px;
+      padding: 50px 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      max-width: 400px;
+      width: 90%;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #ff79c6;
+      text-shadow: 0 0 10px #ff79c6, 0 0 20px #ff4b2b;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      opacity: 0.8;
+      margin-bottom: 30px;
+    }
+
+    /* ===== BUTTONS ===== */
+    .start-btn {
+      display: block;
+      width: 80%;
+      margin: 15px auto;
+      padding: 15px 0;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      box-shadow: 0 0 20px rgba(255,65,108,0.6);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .start-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255,65,108,1), 0 0 60px rgba(255,65,108,0.8);
+    }
+    .start-btn::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: rgba(255,255,255,0.15);
+      transform: rotate(45deg);
+      transition: 0.5s;
+      opacity: 0;
+    }
+    .start-btn:hover::before {
+      top: -10%;
+      left: -10%;
+      opacity: 1;
+    }
+
+    /* ===== ANIMATION ===== */
+    @keyframes fadeIn {
+      from {opacity:0; transform: translateY(-20px);}
+      to {opacity:1; transform: translateY(0);}
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width: 500px){
+      h1 { font-size: 28px; }
+      .start-btn { font-size: 16px; padding: 12px 0; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="landing-container">
+    <h1>👤 Select Your Gender</h1>
+    <p>This helps personalize your rizz 😎</p>
+
+    <button class="start-btn" onclick="selectGender('male')">♂️ Male</button>
+    <button class="start-btn" onclick="selectGender('female')">♀️ Female</button>
+    <button class="start-btn" onclick="selectGender('other')">⚧️ Other</button>
+  </div>
+
+  <script>
+    function selectGender(gender) {
+      localStorage.setItem("rizz_gender", gender);
+      window.location.href = "age.html";
+    }
+  </script>
+
+</body>
+</html>
